@@ -6,34 +6,94 @@
 } 
 :root {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
     --main-color: black;
     --accent-color: sienna;
+    --accent-color2: white;
 }
-h1 {
-    text-transform: uppercase;
-    font-style: italic;
+
+body {
+    max-width: 980px;
+    margin: auto;
+}
+
+header nav .logo {
     font-family: 'Libre Baskerville', serif;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+header nav .menu-items a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 3px;
+}
+
+@media (min-width: 769px) {
+header nav {
+    display: flex;
+}
+
+header nav .menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+}
+}
+header .banner {
+background-image: url(../img/agrodrone7.jpg);
+min-height: 400px;
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+
+.menu-items a:hover {
+    border-color: var(--accent-color);
+}
+header .banner h1 {
+    text-transform: uppercase;
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: var(--accent-color2);
+
+}
+
+.button {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.7s;
+    background-color: transparent;
+}
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
 h2 {
     color: var(--accent-color);
 }
-img {
-    max-width: 300px;
-}
+
 #active {
     font-weight: bold;
 }
-.menu-items {
-border: 1px solid var(--accent-color);
-}
+
 .product-button {
-    border: 1px solid var(--accent-color);
+    
     }
-    .menu-items > a {
-        text-decoration: none;
-    }
-    .menu-items > a:hover {
-        border: 1px solid var(--accent-color);
-    }
+    
+    
