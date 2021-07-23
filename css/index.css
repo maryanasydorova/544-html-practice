@@ -9,6 +9,7 @@
     --main-color: black;
     --accent-color: sienna;
     --accent-color2: white;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -87,13 +88,42 @@ header .banner h1 {
 h2 {
     color: var(--accent-color);
 }
-
-#active {
-    font-weight: bold;
+.product-card img {
+    display: block;
+    width: 100%;
 }
 
 .product-button {
+    display: flex;
+    justify-content: space-around;
     
     }
+    .card-button {
+        border-color: black;
+        color: black;
+    }
+    .card-button:hover {
+        background-color: black;
+        color: white;
+    }
     
-    
+    #active {
+        font-weight: bold;
+    }  
+    @media (min-width: 540px) {
+        .product-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:5px;
+        }
+    }
+    @media (min-width: 660px) {
+        .product-list {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    @media (min-width: 980px) {
+        .product-list {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
